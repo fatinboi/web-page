@@ -81,3 +81,35 @@ nav {
 .button:hover {
   background-color: #333;
 }
+
+/* Responsive Styles */
+
+@media screen and (max-width: 767px) {
+  .products {
+    margin: 10px;
+  }
+
+  .product-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .products {
+    margin: 15px;
+  }
+
+  .product-card {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .products {
+    margin: 20px;
+  }
+
+  .product-card {
+    width: calc(25% - 20px);
+  }
+}
