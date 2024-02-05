@@ -6,9 +6,13 @@ async function fetchProducts(category) {
   try {
     const response = await fetch('https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json');
     const data = await response.json();
-    
-    if (data && data[category] && Array.isArray(data[category])) {
-      return data[category];
+
+    console.log('API Response:', data);
+
+    if (data && data[category] && typeof data[category] === 'object') {
+      // Convert the object properties to an array
+      const productsArray = Object.values(data[category]);
+      return productsArray;
     } else {
       console.error('Invalid or missing data for category:', category);
       return [];
