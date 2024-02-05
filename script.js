@@ -6,7 +6,13 @@ async function fetchProducts(category) {
   try {
     const response = await fetch('https://cdn.shopify.com/s/files/1/0564/3685/0790/files/multiProduct.json');
     const data = await response.json();
-    return data[category];
+    
+    if (data && data[category]) {
+      return data[category];
+    } else {
+      console.error('No products found for category:', category);
+      return [];
+    }
   } catch (error) {
     console.error('Error fetching products:', error);
     return [];
