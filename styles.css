@@ -1,41 +1,34 @@
-/* styles.css */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #fff;
 }
 
-.header {
+header {
   background-color: #fff;
   padding: 20px;
   text-align: center;
 }
 
-.header h1 {
+h1 {
   font-weight: bold;
   color: #000;
 }
 
-.tabs {
+nav {
   display: flex;
-  justify-content: center;
-  background-color: #fff;
+  justify-content: space-around;
   margin-top: 20px;
 }
 
 .tab {
-  margin: 0 15px;
   cursor: pointer;
   color: #000;
-  padding: 10px;
-  border: 2px solid transparent;
+  background-color: #ccc;
+  padding: 10px 20px;
   border-radius: 5px;
-}
-
-.tab:hover {
-  background-color: #eee;
 }
 
 .tab.active {
@@ -47,67 +40,5 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 20px;
-}
-
-.product-card {
-  border: 1px solid #ddd;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
-  width: 200px;
-  border-radius: 5px;
-}
-
-.product-image {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.badge {
-  background-color: #333;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.product-details {
-  margin-top: 10px;
-}
-
-.product-title {
-  font-weight: bold;
-}
-
-.vendor-name {
-  color: #555;
-}
-
-.price {
-  color: #000;
-}
-
-.compare-at-price {
-  color: #888;
-  text-decoration: line-through;
-}
-
-.discount {
-  color: red;
-}
-
-.add-to-cart {
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
+  margin: 20px;
 }
