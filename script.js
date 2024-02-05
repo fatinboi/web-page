@@ -66,7 +66,7 @@ async function showProducts(category) {
       price.textContent = `Price: $${product.price}`;
 
       const compareAtPrice = document.createElement('p');
-      compareAtPrice.textContent = `Compare at Price: $${product.compareAtPrice || 0}`;
+      compareAtPrice.textContent = `Compare at Price: $${product.compareAtPrice || '0'}`;
       compareAtPrice.style.textDecoration = 'line-through';
       compareAtPrice.style.color = '#888';
 
