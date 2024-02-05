@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Men's Products</title>
+  <title>Product Display</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="header">
+  <header>
     <h1>SELECT YOUR CHOICE</h1>
-    <div class="tabs">
-      <div class="tab" onclick="showProducts('men')" id="menTab">Men</div>
-      <div class="tab" onclick="showProducts('women')" id="womenTab">Women</div>
-      <div class="tab" onclick="showProducts('kids')" id="kidsTab">Kids</div>
-    </div>
-  </div>
+    <nav>
+      <div class="tab" onclick="showProducts('men')" data-category="men">Men</div>
+      <div class="tab" onclick="showProducts('women')" data-category="women">Women</div>
+      <div class="tab" onclick="showProducts('kids')" data-category="kids">Kids</div>
+    </nav>
+  </header>
 
   <div class="products" id="productsContainer">
     <!-- Product cards will be dynamically added here -->
