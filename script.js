@@ -9,10 +9,10 @@ async function fetchProducts(category) {
 
     console.log('API Response:', data);
 
-    if (data && data[category] && typeof data[category] === 'object') {
-      // Convert the object properties to an array
-      const productsArray = Object.values(data[category]);
-      return productsArray;
+    const selectedCategory = data.categories.find(cat => cat.category_name.toLowerCase() === category.toLowerCase());
+
+    if (selectedCategory && selectedCategory.category_products) {
+      return selectedCategory.category_products;
     } else {
       console.error('Invalid or missing data for category:', category);
       return [];
