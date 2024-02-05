@@ -42,3 +42,42 @@ nav {
   justify-content: space-around;
   margin: 20px;
 }
+
+.product-card {
+  box-sizing: border-box;
+  width: 250px; /* Set the width of each product card */
+  margin: 10px; /* Adjust the margin as needed */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.badge {
+  background-color: #555;
+  color: #fff;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #333;
+}
