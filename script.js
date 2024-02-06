@@ -68,15 +68,9 @@ async function showProducts(category) {
       price.textContent = `Price: $${product.price}`;
 
       const compareAtPrice = document.createElement('p');
-      const compareAtPriceValue = parseFloat(product.compareAtPrice);
-
-      if (!isNaN(compareAtPriceValue) && compareAtPriceValue < parseFloat(product.price)) {
-        compareAtPrice.textContent = `Compare at Price: $${compareAtPriceValue.toFixed(2)}`;
-        compareAtPrice.style.textDecoration = 'line-through';
-        compareAtPrice.style.color = '#888';
-      } else {
-        compareAtPrice.textContent = ''; // Set to empty if compareAtPrice is not valid
-      }
+      compareAtPrice.textContent = `Compare at Price: $${product.compare_at_price || '0'}`;
+      compareAtPrice.style.textDecoration = 'line-through';
+      compareAtPrice.style.color = '#888';
 
       const discountPercentage = document.createElement('p');
       discountPercentage.textContent = `Discount: ${calculateDiscountPercentage(product.price, product.compareAtPrice)}% off`;
