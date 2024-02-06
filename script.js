@@ -45,6 +45,8 @@ async function showProducts(category) {
 
   if (Array.isArray(products)) {
     products.forEach(product => {
+      console.log('Product:', product);
+
       const productCard = document.createElement('div');
       productCard.className = 'product-card';
 
@@ -67,7 +69,7 @@ async function showProducts(category) {
 
       const compareAtPrice = document.createElement('p');
       const compareAtPriceValue = parseFloat(product.compareAtPrice);
-      
+
       if (!isNaN(compareAtPriceValue) && compareAtPriceValue < parseFloat(product.price)) {
         compareAtPrice.textContent = `Compare at Price: $${compareAtPriceValue.toFixed(2)}`;
         compareAtPrice.style.textDecoration = 'line-through';
@@ -75,7 +77,6 @@ async function showProducts(category) {
       } else {
         compareAtPrice.textContent = ''; // Set to empty if compareAtPrice is not valid
       }
-
 
       const discountPercentage = document.createElement('p');
       discountPercentage.textContent = `Discount: ${calculateDiscountPercentage(product.price, product.compareAtPrice)}% off`;
