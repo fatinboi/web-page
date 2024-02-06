@@ -73,7 +73,7 @@ async function showProducts(category) {
       compareAtPrice.style.color = '#888';
 
       const discountPercentage = document.createElement('p');
-      discountPercentage.textContent = `Discount: ${calculateDiscountPercentage(product.price, product.compareAtPrice)}% off`;
+      discountPercentage.textContent = `Discount: ${calculateDiscountPercentage(product.price, product.compare_at_price)}% off`;
       discountPercentage.style.color = 'red-orange';
 
       const addToCartButton = document.createElement('button');
