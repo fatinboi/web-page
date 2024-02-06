@@ -24,8 +24,11 @@ async function fetchProducts(category) {
 }
 
 function calculateDiscountPercentage(price, compareAtPrice) {
-  if (compareAtPrice && price < compareAtPrice) {
-    const discount = ((compareAtPrice - price) / compareAtPrice) * 100;
+  const numericPrice = parseFloat(price);
+  const numericCompareAtPrice = parseFloat(compareAtPrice);
+
+  if (!isNaN(numericPrice) && !isNaN(numericCompareAtPrice) && numericPrice < numericCompareAtPrice) {
+    const discount = ((numericCompareAtPrice - numericPrice) / numericCompareAtPrice) * 100;
     return discount.toFixed(2);
   }
   return 0;
